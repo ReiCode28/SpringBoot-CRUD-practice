@@ -4,7 +4,11 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
 
-@Configuration
+/** This class populates the "Person" table in H2 with entities
+ * before the web server begins serving
+ */
+
+@Configuration //gets run immediately, before server starts.
 public class PersonConfig {
     @Autowired
     private PersonRepository repository;
