@@ -2,13 +2,14 @@ package com.reicode.crudpractice;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
 @Entity //annotates class signature
 public class Person {
     @Id //annotates field declarations; each @Entity must be annotated with a respective ID so that JPA recognizes it
-    @GeneratedValue //annotates id fields; this indicates that the id should be generated automatically
+    @GeneratedValue(strategy = GenerationType.AUTO) //annotates id fields; this indicates that the id should be generated automatically
     private Long id;
 
     private String firstName;
