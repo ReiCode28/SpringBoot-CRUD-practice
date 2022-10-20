@@ -11,14 +11,14 @@ import java.util.Arrays;
 @Configuration //gets run immediately, before server starts.
 public class PersonConfig {
     @Autowired
-    private PersonRepository repository;
+    private PersonService service;
 
 
     @PostConstruct
     public void setup() {
-        repository.save(new Person(1L, "Leon", "Hunter"));
-        repository.save(new Person(2L, "Eric", "Coder"));
-        repository.save(new Person(3L, "Brent", "Coder"));
+        service.create(new Person(2L, "Eric", "Coder"));
+        service.create(new Person(3L, "Brent", "Coder"));
+        service.create(new Person(1L, "Leon", "Hunter"));
 
 //    Person person1 = new Person();
 //    person1.setFirstName("Leon");
