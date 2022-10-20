@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class allows us to speak to database and also manipulate data
+ */
 @Service
 public class PersonService {
     @Autowired //auto wires the repository into the scope
